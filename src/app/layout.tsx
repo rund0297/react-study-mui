@@ -25,6 +25,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person';
 import VillaIcon from '@mui/icons-material/Villa';
+import EditNoteIcon from '@mui/icons-material/EditNote';
 
 export default function Layout() {
   const theme = useTheme();
@@ -112,14 +113,18 @@ export default function Layout() {
           </List>
           <Divider />
           <List subheader={<ListSubheader>게시글 관리</ListSubheader>}>
-            <ListItem disablePadding>
-              <ListItemButton href='/post/list'>
-                <ListItemIcon>
-                  <VillaIcon />
-                </ListItemIcon>
-                <ListItemText>게시글 목록</ListItemText>
-              </ListItemButton>
-            </ListItem>
+            <ListItemButton href='/post/list'>
+              <ListItemIcon>
+                <VillaIcon />
+              </ListItemIcon>
+              <ListItemText>게시글 목록</ListItemText>
+            </ListItemButton>
+            <ListItemButton href='/post/create'>
+              <ListItemIcon>
+                <EditNoteIcon />
+              </ListItemIcon>
+              <ListItemText>게시글 작성</ListItemText>
+            </ListItemButton>
           </List>
           <Divider />
         </Stack>
